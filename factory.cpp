@@ -46,11 +46,11 @@ Base* Factory::parse(char** input, int length) {
 				if (stoi(input[i])) {
  
 					//to account for the weird functionality of stoi():
-					string originalStr(input[i]);
+					/*string originalStr(input[i]);
 					int newInt = stoi(input[i]);
 					if (originalStr.size() != to_string(newInt).size() ){
 						throw logic_error("Invalid number input");
-					}
+					} */
 
 					Op* newOp = new Op(stoi(input[i]));
 					ops.push(newOp);
